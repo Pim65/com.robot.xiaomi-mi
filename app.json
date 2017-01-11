@@ -1,0 +1,184 @@
+{
+	"id": "com.robot.xiaomi-mi",
+	"name": {
+		"en": "Xiaomi Mi Robot Vacuum Cleaner",
+		"nl": "Xiaomi Mi Robot Stofzuiger"
+},
+	"version": "1.0.0",
+	"compatibility": "0.x || 1.x",
+	"author": {
+		"name": "Jelger Haanstra",
+		"email": "homey@solidewebservices.com"
+	},
+	"category": "appliances",
+	"description": {
+		"en": "Control your Xiaomi Mi Robot Vacuum Cleaner",
+		"nl": "Bestuur je Xiaomi Mi Robot Stofzuiger"
+	},
+	"dependencies": {
+		"net": "*"
+	},
+	"drivers": [
+		{
+			"id": "mi-robot",
+			"name": {
+				"en": "Mi Robot Vacuum Cleaner",
+				"nl": "Mi Robot Stofzuiger"
+			},
+			"images": {
+				"large": "drivers/mi-robot/assets/images/large.jpg",
+				"small": "drivers/mi-robot/assets/images/small.jpg"
+			},
+			"class": "other",
+			"capabilities": [],
+			"pair": [
+				{
+					"id": "start"
+				},
+                {
+                    "id": "list_devices",
+                    "template": "list_devices",
+                    "navigation": {
+                        "next": "add_mi-robot"
+                    }
+                },
+                {
+                    "id": "add_mi-robot",
+                    "template": "add_devices"
+                }
+			],
+			"settings": [
+			    {
+                    "type": "group",
+                    "label": {
+                        "en": "Mi Robot settings",
+						"nl": "Mi Robot instellingen"
+                    },
+					"children": [
+				        {
+				            "id": "address",
+				            "type": "text",
+				            "value": "0.0.0.0",
+				            "label": {
+				                "en": "IP Address",
+				                "nl": "IP Adres"
+				            }
+				        },
+				        {
+					        "id": "start",
+					        "type": "text",
+					        "value": "",
+					        "label": {
+						        "en": "HEX value to start Mi Robot",
+						        "nl": "HEX waarde om Mi Robot te starten"
+					        }
+				        },
+                        {
+					        "id": "pause",
+					        "type": "text",
+					        "value": "",
+					        "label": {
+						        "en": "HEX value to pause Mi Robot",
+						        "nl": "HEX waarde om Mi Robot te pauzeren"
+					        }
+				        },
+                        {
+					        "id": "home",
+					        "type": "text",
+					        "value": "",
+					        "label": {
+						        "en": "HEX value to send Mi Robot home",
+						        "nl": "HEX waarde om Mi Robot naar huis te sturen"
+					        }
+				        },
+                        {
+					        "id": "find",
+					        "type": "text",
+					        "value": "",
+					        "label": {
+						        "en": "HEX value to find Mi Robot",
+						        "nl": "HEX waarde om Mi Robot te vinden"
+					        }
+				        }
+		            ]
+		        }
+		    ]
+		}
+	],
+	"flow": {
+		"actions": [
+			{
+				"id": "startCleaning",
+				"title": {
+					"en": "Start vacuum cleaning",
+					"nl": "Start stofzuigen"
+				},
+				"args": [
+					{
+						"name": "device",
+						"type": "device",
+						"placeholder": {
+							"en": "Select Mi Robot",
+							"nl": "Selecteer Mi Robot"
+						},
+						"filter": "driver_id=mi-robot"
+					}
+				]
+			},
+			{
+				"id": "stopCleaning",
+				"title": {
+					"en": "Stop vacuum cleaning",
+					"nl": "Stop stofzuigen"
+				},
+				"args": [
+					{
+						"name": "device",
+						"type": "device",
+                        "placeholder": {
+							"en": "Select Mi Robot",
+							"nl": "Selecteer Mi Robot"
+						},
+						"filter": "driver_id=mi-robot"
+					}
+				]
+			},
+			{
+				"id": "goHomeMiRobot",
+				"title": {
+					"en": "Send Mi Robot home",
+					"nl": "Stuur Mi Robot naar huis"
+				},
+				"args": [
+					  {
+						"name": "device",
+						"type": "device",
+                        "placeholder": {
+							"en": "Select Mi Robot",
+							"nl": "Selecteer Mi Robot"
+						},
+						"filter": "driver_id=mi-robot"
+					  }
+				]
+			},
+            {
+				"id": "findMiRobot",
+				"title": {
+					"en": "Find Mi Robot",
+					"nl": "Vind Mi Robot"
+				},
+				"args": [
+					  {
+						"name": "device",
+						"type": "device",
+                        "placeholder": {
+							"en": "Select Mi Robot",
+							"nl": "Selecteer Mi Robot"
+						},
+						"filter": "driver_id=mi-robot"
+					  }
+				]
+			}
+		]
+	}
+}

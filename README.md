@@ -1,2 +1,3 @@
-# com.robot.xiaomi-mi
-Homey app for Xiaomi Mi Robot Vacuum Cleaner
+# Homey app for Xiaomi Mi Robot Vacuum Cleaner
+
+Work in progress
