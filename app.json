@@ -10,6 +10,10 @@
 		"name": "Jelger Haanstra",
 		"email": "homey@solidewebservices.com"
 	},
+    "images": {
+        "large": "./assets/images/large.jpg",
+        "small": "./assets/images/small.jpg"
+    },
 	"category": "appliances",
 	"description": {
 		"en": "Control your Xiaomi Mi Robot Vacuum Cleaner",
@@ -34,18 +38,7 @@
 			"pair": [
 				{
 					"id": "start"
-				},
-                {
-                    "id": "list_devices",
-                    "template": "list_devices",
-                    "navigation": {
-                        "next": "add_mi-robot"
-                    }
-                },
-                {
-                    "id": "add_mi-robot",
-                    "template": "add_devices"
-                }
+				}
 			],
 			"settings": [
 			    {

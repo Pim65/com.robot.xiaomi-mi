@@ -8,9 +8,9 @@
         "pause": "HEX value to pause Mi Robot",
         "home": "HEX value to send Mi Robot home",
         "find": "HEX value to find Mi Robot",
-        "required": "Please fill in all the fields.",
         "success": "Mi Robot added succesfully",
         "test" : "Test Connection",
+        "testing" : "Mi Robot find message send, did you hear the Mi Robot?",
         "connect": "Connect"
 	}
 }
