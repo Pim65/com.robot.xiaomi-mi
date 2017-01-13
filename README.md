@@ -11,7 +11,7 @@ Use [Homey](https://www.athom.com/) to control your [Xiaomi Mi Robot Vacuum Clea
 This Homey app is not available in the [Homey App Store](https://apps.athom.com/) due to the extra and complex steps needed before being able to add the Mi Robot as a device within Homey. You can install this app using the [CLI install method](https://forum.athom.com/discussion/1448/how-to-cli-install-method). After installation you can add a Mi Robot as device where you will be asked to add it's IP address and the HEX values corresponding with the commands "start", "pause", "home" and "find". How to retrieve these values is described below.
 
 ## Retrieving the HEX values for sending the commands
-This guide will explain how to retrieve the HEX values for the UDP packets which Homey needs to send to the Mi Robot. This guide is written from a Windows point of view but there are probably alternatives for OSX as well.
+This guide (credits to Sevift for the initial break down and screenshots) will explain how to retrieve the HEX values for the UDP packets which Homey needs to send to the Mi Robot. This guide is written from a Windows point of view but there are probably alternatives for OSX as well.
 ### Requirements
 - Download and install [BlueStacks](http://www.bluestacks.com/). This will allow you to run the Mi Home app from your desktop.
 - Download and install (or use the portable version) of [Wireshark](https://www.wireshark.org/). This will allow you to sniff the traffic between the app running on your desktop and the Mi Robot.
