@@ -16,8 +16,10 @@ This guide will explain how to retrieve the HEX values for the UDP packets which
 - Download and install [BlueStacks](http://www.bluestacks.com/). This will allow you to run the Mi Home app from your desktop.
 - Download and install (or use the portable version) of [Wireshark](https://www.wireshark.org/). This will allow you to sniff the traffic between the app running on your desktop and the Mi Robot.
 - Download and install (or use the portable version) of [PacketSender](https://packetsender.com/). This will allow you to test the retrieved HEX values to make sure you have the right ones.
+
 ### BlueStacks
 Run BlueStacks, configure your Android environment and install the Mi Home app through the Play Store. Log in with your Xiaomi Mi account so your Mi Robot is available in the app. If you dont know this already, use the app the retrieve the IP address of the Mi Robot and remember it (best is to configure a static IP in your router so it doesnt change).
+
 ### Wireshark
 Start Wireshark and select the right networking interface which is used to connect your desktop to the internet. We will be monitoring this for the traffic between your desktop and the Mi Robot.
 ![WireShark Interface](/assets/readme/wireshark_interface.png?raw=true)
