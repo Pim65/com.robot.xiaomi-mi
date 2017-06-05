@@ -4,7 +4,7 @@
 		"en": "Xiaomi Mi Robot Vacuum Cleaner",
 		"nl": "Xiaomi Mi Robot Stofzuiger"
 },
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"compatibility": "0.x || 1.x",
 	"author": {
 		"name": "Jelger Haanstra",
@@ -58,39 +58,12 @@
 				            }
 				        },
 				        {
-					        "id": "start",
+					        "id": "token",
 					        "type": "text",
 					        "value": "",
 					        "label": {
-						        "en": "HEX value to start Mi Robot",
-						        "nl": "HEX waarde om Mi Robot te starten"
-					        }
-				        },
-                        {
-					        "id": "pause",
-					        "type": "text",
-					        "value": "",
-					        "label": {
-						        "en": "HEX value to pause Mi Robot",
-						        "nl": "HEX waarde om Mi Robot te pauzeren"
-					        }
-				        },
-                        {
-					        "id": "home",
-					        "type": "text",
-					        "value": "",
-					        "label": {
-						        "en": "HEX value to send Mi Robot home",
-						        "nl": "HEX waarde om Mi Robot naar huis te sturen"
-					        }
-				        },
-                        {
-					        "id": "find",
-					        "type": "text",
-					        "value": "",
-					        "label": {
-						        "en": "HEX value to find Mi Robot",
-						        "nl": "HEX waarde om Mi Robot te vinden"
+						        "en": "Mi Robot Token",
+						        "nl": "Mi Robot Token"
 					        }
 				        }
 		            ]
@@ -101,7 +74,7 @@
 	"flow": {
 		"actions": [
 			{
-				"id": "startCleaning",
+				"id": "start",
 				"title": {
 					"en": "Start vacuum cleaning",
 					"nl": "Start stofzuigen"
@@ -119,10 +92,10 @@
 				]
 			},
 			{
-				"id": "stopCleaning",
+				"id": "pause",
 				"title": {
-					"en": "Stop vacuum cleaning",
-					"nl": "Stop stofzuigen"
+					"en": "Pause vacuum cleaning",
+					"nl": "Pauzeer stofzuigen"
 				},
 				"args": [
 					{
@@ -137,10 +110,10 @@
 				]
 			},
 			{
-				"id": "goHomeMiRobot",
+				"id": "gohome",
 				"title": {
-					"en": "Send Mi Robot home",
-					"nl": "Stuur Mi Robot naar huis"
+					"en": "Send home",
+					"nl": "Stuur naar huis"
 				},
 				"args": [
 					  {
@@ -155,10 +128,10 @@
 				]
 			},
             {
-				"id": "findMiRobot",
+				"id": "find",
 				"title": {
-					"en": "Find Mi Robot",
-					"nl": "Vind Mi Robot"
+					"en": "Find",
+					"nl": "Vind"
 				},
 				"args": [
 					  {

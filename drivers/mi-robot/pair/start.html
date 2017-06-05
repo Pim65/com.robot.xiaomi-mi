@@ -25,21 +25,16 @@ $(function() {
     $('#test-connection').click(function(){
 
 		var inputaddress = $('#address').val();
-		var inputstart = $('#start').val();
-        var inputpause = $('#pause').val();
-        var inputhome = $('#home').val();
-        var inputfind = $('#find').val();
+		var inputtoken = $('#token').val();
+        var inputpoll = $('#poll').val();
 
-        if( inputaddress != '' && inputstart != '', inputpause != '', inputhome != '', inputfind != '') {
-            var data = {
+        if( inputaddress != '' && inputtoken != '' && inputpoll != '') {
+            var device_settings = {
                 address: inputaddress,
-                start: inputstart,
-    			pause: inputpause,
-                home: inputhome,
-                find: inputfind
+                token: inputtoken
             };
 
-            Homey.emit( 'test-connection', data, function( err, result ) {
+            Homey.emit( 'test-connection', device_settings, function( err, result ) {
                 console.log(result); // result is Started!
             });
 
@@ -56,36 +51,22 @@ $(function() {
 	$('#connect').click(function(){
 
 		var inputaddress = $('#address').val();
-		var inputstart = $('#start').val();
-        var inputpause = $('#pause').val();
-        var inputhome = $('#home').val();
-        var inputfind = $('#find').val();
+		var inputtoken = $('#token').val();
+        var inputpoll = $('#poll').val();
 
-        if( inputaddress != '' && inputstart != '', inputpause != '', inputhome != '', inputfind != '') {
-            var data = {
+        if( inputaddress != '' && inputtoken != '' && inputpoll != '') {
+            var device_settings = {
                 address: inputaddress,
-                start: inputstart,
-    			pause: inputpause,
-                home: inputhome,
-                find: inputfind
+                token: inputtoken,
+                poll: inputpoll
             };
 
             Homey.addDevice({
                 name	: 'Mi Robot',
                 data 	: {
-                    address : $('#address').val(),
-            		start   : $('#start').val(),
-                    pause   : $('#pause').val(),
-                    home    : $('#home').val(),
-                    find    : $('#find').val()
+                    id : inputtoken
                 },
-                settings: {
-                    address : $('#address').val(),
-            		start   : $('#start').val(),
-                    pause   : $('#pause').val(),
-                    home    : $('#home').val(),
-                    find    : $('#find').val()
-                }
+                settings: device_settings
             }, function( err, result ) {
                 if ( err ) {
                     $('.mi-robot-err-msg').show();
@@ -123,20 +104,12 @@ $(function() {
     <input type="text" class="form-control" id="address" placeholder="192.168.0.100">
 </div>
 <div class="form-group">
-	<label for="start" data-i18n="pair.start">HEX value to start Mi Robot</label>
-	<input type="text" class="form-control" id="start">
+	<label for="token" data-i18n="pair.token">Mi Robot Token</label>
+	<input type="text" class="form-control" id="token" placeholder="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF">
 </div>
 <div class="form-group">
-	<label for="pause" data-i18n="pair.pause">HEX value to pause Mi Robot</label>
-	<input type="text" class="form-control" id="pause">
-</div>
-<div class="form-group">
-	<label for="home" data-i18n="pair.home">HEX value to send Mi Robot home</label>
-	<input type="text" class="form-control" id="home">
-</div>
-<div class="form-group">
-	<label for="find" data-i18n="pair.find">HEX value to find Mi Robot</label>
-	<input type="text" class="form-control" id="find">
+	<label for="poll" data-i18n="pair.poll">Polling interval for status updates</label>
+	<input type="text" class="form-control" id="poll" placeholder="300">
 </div>
 <div class="form-group buttons">
     <button id="test-connection" class="button" data-i18n="pair.test">Test Connection</button>

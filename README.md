@@ -1,3 +1,5 @@
+<span style="color:#990000">**IMPORTANT:** this Homey app has been replaced by a new Homey app which supports more Xiaomi Mi Home devices and makes pairing easier. It's available in the Athom App Store [here](https://apps.athom.com/app/com.xiaomi-miio)</span>.
+
 # Homey app for Xiaomi Mi Robot Vacuum Cleaner
 Use [Homey](https://www.athom.com/) to control your [Xiaomi Mi Robot Vacuum Cleaner](http://xiaomi-mi.com/smart-home/xiaomi-mi-robot-vacuum-cleaner-white/). Currently Xiaomi does not offer an open API for controlling the Mi Robot. This app works by sending UDP packets from Homey to the Mi Robot on your local network. These UDP packets are send as HEX values and these values are different for each Mi Robot. The HEX values have to be retrieved by sniffing the traffic between the Mi Home smartphone app and the Mi Robot on your local network. Although retrieving these HEX values is explained below, this is not for the faint-hearted and requires some technical skills (or at least being able to follow a tutorial step by step).
 
